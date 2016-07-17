@@ -1,0 +1,10 @@
+Tell don't ask leads to cleaner code because:
+
+- Responsibilities are better divided.
+- Because responsibilities are better divided the business logic is more flexible when it comes to change.
+(e.g.: What if the discount has to be applied to all orderLines? Or only to the one with the highest price?, etc.)
+- Classes become easier to test.
+    - FinaliseOrderServiceTest could for instance use a mock Order and simply verify that applyDiscount() is called.
+    - OrderTest only tests that sorting is done correctly.
+    - OrderLineTest only has to test the application of a discount on itself.
+- Also notice how the Law Of Demeter is not violated anymore in FinaliseOrderServiceTest!

@@ -2,36 +2,43 @@ package be.jidoka.clean.code.tell.dont.ask.domain;
 
 import java.math.BigDecimal;
 
-public class OrderLine {
+/**
+ * OrderLine is now completely encapsulated by the Order it is in!
+ */
+class OrderLine {
 
     private final String productName;
     private BigDecimal price;
     private final int amount;
 
-    public OrderLine(String productName, BigDecimal price, int amount) {
+    OrderLine(String productName, BigDecimal price, int amount) {
         this.productName = productName;
         this.price = price;
         this.amount = amount;
     }
 
-    public String getProductName() {
+    String getProductName() {
         return productName;
     }
 
-    public void setPrice(BigDecimal newPrice) {
+    void setPrice(BigDecimal newPrice) {
         this.price = newPrice;
     }
 
-    public BigDecimal getPrice() {
+    BigDecimal getPrice() {
         return price;
     }
 
-    public int getAmount() {
+    int getAmount() {
         return amount;
     }
 
-    public BigDecimal calculateSubtotal() {
+    BigDecimal calculateSubtotal() {
         return price.multiply(BigDecimal.valueOf(amount));
+    }
+
+    void applyDiscount(BigDecimal discount) {
+        setPrice(price.subtract(price.multiply(discount)));
     }
 
 }

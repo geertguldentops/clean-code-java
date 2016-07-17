@@ -1,7 +1,6 @@
 package be.jidoka.clean.code.tell.dont.ask.application;
 
 import be.jidoka.clean.code.tell.dont.ask.domain.Order;
-import be.jidoka.clean.code.tell.dont.ask.domain.OrderLine;
 import be.jidoka.clean.code.tell.dont.ask.domain.OrderRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +8,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 
-import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -22,19 +20,12 @@ public class FinaliseOrderServiceTest {
 
     @Test
     public void shouldCalculateFinalPriceAndSaveOrder_OnFinalise_WithValidOrder() {
-        final Order order = new Order();
-        order.addLine(new OrderLine("Clean code", new BigDecimal("50.00"), 1));
-        order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("99.99"), 2));
-
+        final Order order = mock(Order.class);
         final BigDecimal discount = new BigDecimal("0.1");
-
-        assertThat(order.calculateTotal()).isEqualTo("249.98");
 
         finaliseOrderService.finalise(order, discount);
 
-        // With isEqualTo 5.0 != 5.00; By using isEqualByComparingTo we automatically ignore trailing 0 (which are mathematically insignificant anyway).
-        assertThat(order.calculateTotal()).isEqualByComparingTo("244.98");
-
+        verify(order).applyDiscount(discount);
         verify(orderRepository).save(order);
     }
 
