@@ -1,0 +1,3 @@
+Notice how by violating the "Tell, don't ask" principle we are also violating other principles:
+- Law of Demeter (FinaliseOrderService)
+- SRP (FinaliseOrderService)
