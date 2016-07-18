@@ -1,3 +1,9 @@
+LSP:
+
+- JSE violations: Stack and Properties classes!
+
+
 Notice how by violating the "Tell, don't ask" principle we are also violating other principles:
+
 - Law of Demeter (FinaliseOrderService)
 - SRP (FinaliseOrderService)
