@@ -1,5 +1,7 @@
-package be.jidoka.clean.code.liskov.substitution.principle.domain;
+package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
+import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Rectangle;
+import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Square;
 import org.junit.Ignore;
 import org.junit.Test;
 

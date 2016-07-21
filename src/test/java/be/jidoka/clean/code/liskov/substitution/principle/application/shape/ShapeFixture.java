@@ -1,7 +1,7 @@
-package be.jidoka.clean.code.liskov.substitution.principle.application;
+package be.jidoka.clean.code.liskov.substitution.principle.application.shape;
 
-import be.jidoka.clean.code.liskov.substitution.principle.domain.Rectangle;
-import be.jidoka.clean.code.liskov.substitution.principle.domain.Square;
+import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Rectangle;
+import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Square;
 
 import java.util.ArrayList;
 import java.util.List;

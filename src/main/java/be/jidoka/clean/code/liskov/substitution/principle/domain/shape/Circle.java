@@ -1,4 +1,4 @@
-package be.jidoka.clean.code.liskov.substitution.principle.domain;
+package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
 public class Circle implements Shape {
 

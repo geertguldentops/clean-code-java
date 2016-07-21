@@ -1,6 +1,7 @@
 LSP:
 
 - JSE violations: Stack and Properties classes!
+- Note how fixing the issue in the Client code RectangleServiceTest.doubleWidthOf violates the Open-Closed principle, we shouldn't have to change our client code when a new subclass is added!
 
 
 Notice how by violating the "Tell, don't ask" principle we are also violating other principles:
