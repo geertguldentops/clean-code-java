@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.meaningful.names.encodings.avoid.domain;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Car {
 
