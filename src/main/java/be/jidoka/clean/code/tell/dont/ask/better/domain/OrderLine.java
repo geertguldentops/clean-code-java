@@ -1,4 +1,4 @@
-package be.jidoka.clean.code.tell.dont.ask.domain;
+package be.jidoka.clean.code.tell.dont.ask.better.domain;
 
 import java.math.BigDecimal;
 

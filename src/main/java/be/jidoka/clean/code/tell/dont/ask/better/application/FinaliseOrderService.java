@@ -1,7 +1,7 @@
-package be.jidoka.clean.code.tell.dont.ask.application;
+package be.jidoka.clean.code.tell.dont.ask.better.application;
 
-import be.jidoka.clean.code.tell.dont.ask.domain.Order;
-import be.jidoka.clean.code.tell.dont.ask.domain.OrderRepository;
+import be.jidoka.clean.code.tell.dont.ask.better.domain.Order;
+import be.jidoka.clean.code.tell.dont.ask.better.domain.OrderRepository;
 
 import java.math.BigDecimal;
 
