@@ -1,5 +1,7 @@
-package be.jidoka.clean.code.tell.dont.ask.better.domain;
+package be.jidoka.clean.code.tell.dont.ask.doinstead.domain;
 
+import be.jidoka.clean.code.tell.dont.ask.better.domain.Order;
+import be.jidoka.clean.code.tell.dont.ask.better.domain.OrderLine;
 import org.junit.Test;
 
 import java.math.BigDecimal;
