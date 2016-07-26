@@ -3,7 +3,7 @@ package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 public class Square extends Rectangle {
 
     public Square(double side) {
-        // Square has an extra invariant compared to a square, weight and height must always be equal!
+        // Square has an extra invariant compared to a rectangle, weight and height must always be equal!
         super(side, side);
     }
 
@@ -18,7 +18,7 @@ public class Square extends Rectangle {
     }
 
     private void setSide(double side) {
-        // Square has an extra invariant compared to a square, weight and height must always be equal!
+        // Square has an extra invariant compared to a rectangle, weight and height must always be equal!
         super.setWidth(side);
         super.setHeight(side);
     }
