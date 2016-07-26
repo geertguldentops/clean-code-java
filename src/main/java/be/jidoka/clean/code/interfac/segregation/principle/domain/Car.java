@@ -1,10 +1,9 @@
-package be.jidoka.clean.code.meaningful.names.encodings.doinstead.domain;
+package be.jidoka.clean.code.interfac.segregation.principle.domain;
 
 import java.awt.Color;
 
 public class Car {
 
-    // Do note the Java naming convention to write the names of static final variables in capitals!
     private static final int CONS_MAXIMUM_KILOMETERS_ALLOWED = 300_000;
 
     private String brand;
@@ -18,7 +17,6 @@ public class Car {
     private Color color;
 
     public Car(String brand, String make, String ownerName, int kilometersDriven, Color color) {
-        // The IDE makes it clear what is a member field and what is not.
         this.brand = brand;
         this.make = make;
         this.ownerName = ownerName;
