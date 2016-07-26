@@ -1,8 +1,7 @@
 package be.jidoka.clean.code.tell.dont.ask.doinstead.application;
 
-import be.jidoka.clean.code.tell.dont.ask.better.application.FinaliseOrderService;
-import be.jidoka.clean.code.tell.dont.ask.better.domain.Order;
-import be.jidoka.clean.code.tell.dont.ask.better.domain.OrderRepository;
+import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.Order;
+import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.OrderRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
