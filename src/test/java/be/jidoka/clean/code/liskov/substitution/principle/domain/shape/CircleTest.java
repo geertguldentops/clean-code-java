@@ -1,9 +1,8 @@
 package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
-import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Circle;
 import org.junit.Test;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CircleTest {
 
