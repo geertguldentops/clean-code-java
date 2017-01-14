@@ -15,7 +15,7 @@ public class Car {
     private Color color;
 
     // Avoid having 5 parameters in this constructor (+ maintenance when it becomes more or less!)
-    // Hide constructor, client's should use the CarBuilder!
+    // Hide constructor, clients should use the CarBuilder!
     private Car(CarBuilder carBuilder) {
         this.brand = carBuilder.brand;
         this.make = carBuilder.make;
