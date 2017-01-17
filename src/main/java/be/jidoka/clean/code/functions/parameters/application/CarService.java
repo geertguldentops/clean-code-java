@@ -20,6 +20,8 @@ public class CarService {
 //                .kilometersDriven(90_000)
                 .build();
 
+        // Compare to: Car car = new Car("Geert Guldentops", "BMW", "116 D", Color.BLUE, 90_000);
+
         return car;
     }
 
