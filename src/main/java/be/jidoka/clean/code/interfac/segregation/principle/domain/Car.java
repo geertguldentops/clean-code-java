@@ -1,10 +1,10 @@
 package be.jidoka.clean.code.interfac.segregation.principle.domain;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Car {
 
-    private static final int CONS_MAXIMUM_KILOMETERS_ALLOWED = 300_000;
+    private static final int MAXIMUM_KILOMETERS_ALLOWED = 300_000;
 
     private String brand;
 

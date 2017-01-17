@@ -1,11 +1,11 @@
 package be.jidoka.clean.code.meaningful.names.encodings.doinstead.domain;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Car {
 
     // Do note the Java naming convention to write the names of static final variables in capitals!
-    private static final int CONS_MAXIMUM_KILOMETERS_ALLOWED = 300_000;
+    private static final int MAXIMUM_KILOMETERS_ALLOWED = 300_000;
 
     private String brand;
 
