@@ -4,7 +4,7 @@ import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.Order;
 import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.OrderRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 
