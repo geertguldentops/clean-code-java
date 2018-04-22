@@ -30,7 +30,7 @@ public class EmployeeTest {
     public void shouldReturn3000OnCalculateWagerForEmployeeWorkingFor2Years() {
         final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
 
-        assertThat(employee.calculateWager()).isEqualTo(2000);
+        assertThat(employee.calculateWager()).isEqualTo(3_000);
     }
 
 }

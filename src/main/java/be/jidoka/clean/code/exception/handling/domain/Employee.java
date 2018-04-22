@@ -8,7 +8,7 @@ import java.time.Period;
 // Having to implement a Nullable interface is not strictly necessary.
 public class Employee implements Nullable {
 
-    private static final int BASE_SALARY = 1000;
+    private static final int BASE_SALARY = 1_000;
 
     private Long id;
 
