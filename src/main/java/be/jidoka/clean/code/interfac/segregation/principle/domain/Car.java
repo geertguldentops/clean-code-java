@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.interfac.segregation.principle.domain;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Car {
 

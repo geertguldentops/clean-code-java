@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.math.BigDecimal.ZERO;
+import static java.util.Comparator.comparing;
 
 public class Order {
 
@@ -26,7 +27,7 @@ public class Order {
     }
 
     public void applyDiscount(BigDecimal discount) {
-        orderLines.sort((o1, o2) -> o1.getPrice().compareTo(o2.getPrice()));
+        orderLines.sort(comparing(OrderLine::getPrice));
         final OrderLine orderLineWithLowestPrice = orderLines.get(0);
 
         // Tell the orderLine to apply the discount.

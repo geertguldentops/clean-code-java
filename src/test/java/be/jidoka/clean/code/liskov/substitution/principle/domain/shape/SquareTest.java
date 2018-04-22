@@ -1,6 +1,5 @@
 package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
-import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Square;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

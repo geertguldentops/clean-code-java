@@ -28,10 +28,7 @@ public class Circle implements Shape {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Circle{");
-        sb.append("r=").append(r);
-        sb.append('}');
-        return sb.toString();
+        return "Circle{" + "r=" + getR() + '}';
     }
 
 }

@@ -7,6 +7,8 @@ import be.jidoka.clean.code.tell.dont.ask.avoid.domain.OrderRepository;
 import java.math.BigDecimal;
 import java.util.List;
 
+import static java.util.Comparator.comparing;
+
 // Denotes a transaction boundary
 // @ApplicationService
 public class FinaliseOrderService {
@@ -27,7 +29,7 @@ public class FinaliseOrderService {
     private OrderLine getOrderLineWithLowestPrice(Order order) {
         // Ask an Order for its OrderLines.
         final List<OrderLine> orderLines = order.getOrderLines();
-        orderLines.sort((o1, o2) -> o1.getPrice().compareTo(o2.getPrice()));
+        orderLines.sort(comparing(OrderLine::getPrice));
 
         return orderLines.get(0);
     }

@@ -21,10 +21,6 @@ class OrderLine {
         return productName;
     }
 
-    void setPrice(BigDecimal newPrice) {
-        this.price = newPrice;
-    }
-
     BigDecimal getPrice() {
         return price;
     }
@@ -38,7 +34,7 @@ class OrderLine {
     }
 
     void applyDiscount(BigDecimal discount) {
-        setPrice(price.subtract(price.multiply(discount)));
+        this.price = price.subtract(price.multiply(discount));
     }
 
 }

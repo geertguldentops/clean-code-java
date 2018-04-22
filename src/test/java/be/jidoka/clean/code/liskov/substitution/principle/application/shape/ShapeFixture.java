@@ -6,9 +6,9 @@ import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Square;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShapeFixture {
+class ShapeFixture {
 
-    public static List<Rectangle> generateRectangles() {
+    static List<Rectangle> generateRectangles() {
         final List<Rectangle> rectangles = new ArrayList<>();
         rectangles.add(new Rectangle(7.8, 10.6));
         rectangles.add(new Rectangle(1.8, 5.9));

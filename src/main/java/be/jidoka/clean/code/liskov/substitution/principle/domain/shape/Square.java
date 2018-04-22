@@ -25,10 +25,7 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Square{");
-        sb.append("side=").append(getWidth());
-        sb.append('}');
-        return sb.toString();
+        return "Square{" + "side=" + getWidth() + '}';
     }
 
 }

@@ -38,11 +38,9 @@ public class Rectangle implements Shape {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Rectangle{");
-        sb.append("width=").append(width);
-        sb.append(", height=").append(height);
-        sb.append('}');
-        return sb.toString();
+        return "Rectangle{" + "width=" + getWidth() +
+                ", height=" + getHeight() +
+                '}';
     }
 
 }
