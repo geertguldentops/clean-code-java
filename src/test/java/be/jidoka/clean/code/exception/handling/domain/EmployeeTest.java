@@ -27,8 +27,8 @@ public class EmployeeTest {
     }
 
     @Test
-    public void shouldReturn3000OnCalculateWagerForEmployeeWorkingFor2Years() {
-        final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
+    public void shouldReturn3000OnCalculateWagerForEmployeeWorkingFor3Years() {
+        final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.now().minusYears(3));
 
         assertThat(employee.calculateWager()).isEqualTo(3_000);
     }
