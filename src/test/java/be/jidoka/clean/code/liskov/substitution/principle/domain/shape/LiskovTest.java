@@ -1,13 +1,13 @@
 package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class LiskovTest {
 
-    @Ignore
+    @Disabled
     @Test
     public void squareBreaksLiskovsSubstitutionPrinciple() {
         Rectangle rectangle = new Square(12.5);

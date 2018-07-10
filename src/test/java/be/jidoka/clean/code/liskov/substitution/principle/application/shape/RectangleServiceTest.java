@@ -1,7 +1,7 @@
 package be.jidoka.clean.code.liskov.substitution.principle.application.shape;
 
 import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Rectangle;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
 import java.util.List;

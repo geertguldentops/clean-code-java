@@ -2,16 +2,16 @@ package be.jidoka.clean.code.tell.dont.ask.doinstead.application;
 
 import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.Order;
 import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.OrderRepository;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
+import be.jidoka.clean.code.test.extension.MockitoExtension;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.math.BigDecimal;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class FinaliseOrderServiceTest {
 
     private OrderRepository orderRepository = mock(OrderRepository.class);

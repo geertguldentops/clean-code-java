@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.tell.dont.ask.avoid.domain;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
