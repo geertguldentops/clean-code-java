@@ -12,16 +12,16 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class FinaliseOrderServiceTest {
+class FinaliseOrderServiceTest {
 
-    private OrderRepository orderRepository = mock(OrderRepository.class);
+    private final OrderRepository orderRepository = mock(OrderRepository.class);
 
     private final FinaliseOrderService finaliseOrderService = new FinaliseOrderService(orderRepository);
 
     @Test
-    public void shouldCalculateFinalPriceAndSaveOrder_OnFinalise_WithValidOrder() {
-        final Order order = mock(Order.class);
-        final BigDecimal discount = new BigDecimal("0.1");
+    void shouldCalculateFinalPriceAndSaveOrder_onFinalise_withValidOrder() {
+        var order = mock(Order.class);
+        var discount = new BigDecimal("0.1");
 
         finaliseOrderService.finalise(order, discount);
 

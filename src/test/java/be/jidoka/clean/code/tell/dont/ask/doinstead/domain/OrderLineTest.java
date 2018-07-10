@@ -6,18 +6,18 @@ import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class OrderLineTest {
+class OrderLineTest {
 
     @Test
-    public void shouldReturnPriceMultipliedByAmount_OnCalculateSubtotal_WithValidOrderLine() {
-        OrderLine orderLine = new OrderLine("Clean code distilled", BigDecimal.TEN, 5);
+    void shouldReturnPriceMultipliedByAmount_onCalculateSubtotal_withValidOrderLine() {
+        var orderLine = new OrderLine("Clean code distilled", BigDecimal.TEN, 5);
 
         assertThat(orderLine.calculateSubtotal()).isEqualTo("50");
     }
 
     @Test
-    public void shouldReturnPriceMinusDiscount_OnApplyDiscount_WithValidOrderLine() {
-        OrderLine orderLine = new OrderLine("Clean code distilled", BigDecimal.TEN, 5);
+    void shouldReturnPriceMinusDiscount_onApplyDiscount_withValidOrderLine() {
+        var orderLine = new OrderLine("Clean code distilled", BigDecimal.TEN, 5);
 
         assertThat(orderLine.calculateSubtotal()).isEqualTo("50");
 

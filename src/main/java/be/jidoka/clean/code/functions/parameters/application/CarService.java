@@ -11,7 +11,7 @@ public class CarService {
         //  + Can simply leave out optional fields, no need to pass in nulls to optional parameters. (e.g.: kilometersDriven)
         //  + Clients can provide fields in the order they want.
         //  + Easier to see which argument belongs to which parameter. (e.g.: With a constructor, is the second the String the make or the ownerName?)
-        Car car = Car.CarBuilder.carBuilderWith()
+        var car = Car.CarBuilder.carBuilderWith()
                 .ownerName("Geert Guldentops")
                 .brand("BMW")
                 .make("116 D")

@@ -6,18 +6,18 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EmployeeTest {
+class EmployeeTest {
 
     @Test
-    public void shouldAlwaysReturnFalseOnIsNullable() {
-        final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
+    void shouldAlwaysReturnFalse_onIsNullable() {
+        var employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
 
         assertThat(employee.isNull()).isFalse();
     }
 
     @Test
-    public void shouldCreateEmployeeOnNewEmployee() {
-        final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
+    void shouldCreateEmployee_onNewEmployee() {
+        var employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.of(2014, 6, 21));
 
         assertThat(employee.getId()).isEqualTo(1L);
         assertThat(employee.getFirstName()).isEqualTo("Joske");
@@ -27,8 +27,8 @@ public class EmployeeTest {
     }
 
     @Test
-    public void shouldReturn3000OnCalculateWagerForEmployeeWorkingFor3Years() {
-        final Employee employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.now().minusYears(3));
+    void shouldReturn3000O_oCalculateWager_withEmployeeWasHired3YearsAgo() {
+        var employee = new Employee(1L, "Joske", "Vermeulen", Function.CONSULTANT, LocalDate.now().minusYears(3));
 
         assertThat(employee.calculateWager()).isEqualTo(3_000);
     }

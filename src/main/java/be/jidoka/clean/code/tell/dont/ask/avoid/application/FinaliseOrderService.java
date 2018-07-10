@@ -5,7 +5,6 @@ import be.jidoka.clean.code.tell.dont.ask.avoid.domain.OrderLine;
 import be.jidoka.clean.code.tell.dont.ask.avoid.domain.OrderRepository;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 import static java.util.Comparator.comparing;
 
@@ -20,7 +19,7 @@ public class FinaliseOrderService {
     }
 
     public void finalise(Order order, BigDecimal discount) {
-        final OrderLine orderLineWithLowestPrice = getOrderLineWithLowestPrice(order);
+        var orderLineWithLowestPrice = getOrderLineWithLowestPrice(order);
         applyDiscount(orderLineWithLowestPrice, discount);
 
         orderRepository.save(order);
@@ -28,7 +27,7 @@ public class FinaliseOrderService {
 
     private OrderLine getOrderLineWithLowestPrice(Order order) {
         // Ask an Order for its OrderLines.
-        final List<OrderLine> orderLines = order.getOrderLines();
+        var orderLines = order.getOrderLines();
         orderLines.sort(comparing(OrderLine::getPrice));
 
         return orderLines.get(0);
@@ -36,9 +35,9 @@ public class FinaliseOrderService {
 
     private void applyDiscount(OrderLine orderLineWithLowestPrice, BigDecimal discount) {
         // Ask an OrderLine for its price.
-        final BigDecimal lowestPrice = orderLineWithLowestPrice.getPrice();
-        final BigDecimal appliedDiscount = lowestPrice.multiply(discount);
-        final BigDecimal discountedPrice = lowestPrice.subtract(appliedDiscount);
+        var lowestPrice = orderLineWithLowestPrice.getPrice();
+        var appliedDiscount = lowestPrice.multiply(discount);
+        var discountedPrice = lowestPrice.subtract(appliedDiscount);
 
         orderLineWithLowestPrice.setPrice(discountedPrice);
     }

@@ -6,11 +6,11 @@ import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class OrderTest {
+class OrderTest {
 
     @Test
-    public void shouldReturnSumOfOrderLineSubTotals_OnCalculateTotal_WithMultipleOrderLines() {
-        final Order order = new Order();
+    void shouldReturnSumOfOrderLineSubTotals_onCalculateTotal_withMultipleOrderLines() {
+        var order = new Order();
         order.addLine(new OrderLine("Clean code", new BigDecimal("44.99"), 1));
         order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("49.99"), 2));
 
@@ -18,12 +18,12 @@ public class OrderTest {
     }
 
     @Test
-    public void shouldSubtractDiscountFromOrderLineWithLowestPrice_OnApplyDiscount_WithValidOrder() {
-        final Order order = new Order();
+    void shouldSubtractDiscountFromOrderLineWithLowestPrice_onApplyDiscount_withValidOrder() {
+        var order = new Order();
         order.addLine(new OrderLine("Clean code", new BigDecimal("50.00"), 1));
         order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("99.99"), 2));
 
-        final BigDecimal discount = new BigDecimal("0.1");
+        var discount = new BigDecimal("0.1");
 
         assertThat(order.calculateTotal()).isEqualTo("249.98");
 

@@ -9,7 +9,7 @@ import java.util.List;
 class ShapeFixture {
 
     static List<Rectangle> generateRectangles() {
-        final List<Rectangle> rectangles = new ArrayList<>();
+        var rectangles = new ArrayList<Rectangle>();
         rectangles.add(new Rectangle(7.8, 10.6));
         rectangles.add(new Rectangle(1.8, 5.9));
         rectangles.add(new Rectangle(2.7, 8.6));

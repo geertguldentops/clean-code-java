@@ -28,7 +28,7 @@ public class Order {
 
     public void applyDiscount(BigDecimal discount) {
         orderLines.sort(comparing(OrderLine::getPrice));
-        final OrderLine orderLineWithLowestPrice = orderLines.get(0);
+        var orderLineWithLowestPrice = orderLines.get(0);
 
         // Tell the orderLine to apply the discount.
         orderLineWithLowestPrice.applyDiscount(discount);

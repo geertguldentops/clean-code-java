@@ -2,7 +2,7 @@ package be.jidoka.clean.code.exception.handling.domain;
 
 import be.jidoka.clean.code.exception.handling.Nullable;
 
-// Enums can also implement the Null Object Pattern.
+// Enums can also implement the Null Object/Special Case Pattern.
 public enum Function implements Nullable {
     CEO(false),
     CFO(false),

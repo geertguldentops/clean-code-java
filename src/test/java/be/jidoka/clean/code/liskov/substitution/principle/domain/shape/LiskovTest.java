@@ -4,21 +4,22 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.data.Offset.offset;
 
-public class LiskovTest {
+class LiskovTest {
 
     @Disabled
     @Test
-    public void squareBreaksLiskovsSubstitutionPrinciple() {
+    void squareBreaksLiskovsSubstitutionPrinciple() {
         Rectangle rectangle = new Square(12.5);
 
-        assertThat(rectangle.getHeight()).isEqualTo(12.5);
-        assertThat(rectangle.getWidth()).isEqualTo(12.5);
+        assertThat(rectangle.getHeight()).isEqualTo(12.5, offset(0.1));
+        assertThat(rectangle.getWidth()).isEqualTo(12.5, offset(0.1));
 
         rectangle.setWidth(6);
 
-        assertThat(rectangle.getHeight()).isEqualTo(12.5);
-        assertThat(rectangle.getWidth()).isEqualTo(6.0);
+        assertThat(rectangle.getHeight()).isEqualTo(12.5, offset(0.1));
+        assertThat(rectangle.getWidth()).isEqualTo(6.0, offset(0.1));
     }
 
 }

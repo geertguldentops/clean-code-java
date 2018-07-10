@@ -14,21 +14,21 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class FinaliseOrderServiceTest {
+class FinaliseOrderServiceTest {
 
-    private OrderRepository orderRepository = mock(OrderRepository.class);
+    private final OrderRepository orderRepository = mock(OrderRepository.class);
 
     private final FinaliseOrderService finaliseOrderService = new FinaliseOrderService(orderRepository);
 
     @Test
-    public void shouldCalculateFinalPriceAndSaveOrder_OnFinalise_WithValidOrder() {
-        final Order order = new Order();
+    void shouldCalculateFinalPriceAndSaveOrder_onFinalise_withValidOrder() {
+        var order = new Order();
         order.addLine(new OrderLine("Clean code", new BigDecimal("50.00"), 1));
         order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("99.99"), 2));
 
         assertThat(order.calculateTotal()).isEqualTo("249.98");
 
-        final BigDecimal discount = new BigDecimal("0.1");
+        var discount = new BigDecimal("0.1");
         finaliseOrderService.finalise(order, discount);
 
         // With isEqualTo 5.0 != 5.00; By using isEqualByComparingTo we automatically ignore trailing 0 (which are mathematically insignificant anyway).

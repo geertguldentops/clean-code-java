@@ -7,11 +7,11 @@ import be.jidoka.clean.code.exception.handling.infrastucture.EmployeeReporter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
-
     private final EmployeeReporter employeeReporter;
 
     public EmployeeService(EmployeeRepository employeeRepository, EmployeeReporter employeeReporter) {
@@ -21,15 +21,15 @@ public class EmployeeService {
 
     public void reportOnEmployeeWagers(List<Integer> employeeIds) {
         // All of the employees in this List are non-null!
-        final List<Employee> employees = loadEmployees(employeeIds);
+        var employees = loadEmployees(employeeIds);
         reportOnWagersOf(employees);
     }
 
     private List<Employee> loadEmployees(List<Integer> employeeIds) {
-        final List<Employee> employees = new ArrayList<>();
+        var employees = new ArrayList<Employee>();
 
         // Obtain the Employees from some external source e.g. a database.
-        for (Integer employeeId : employeeIds) {
+        for (var employeeId : employeeIds) {
             employees.add(loadEmployee(employeeId));
         }
 
@@ -38,27 +38,23 @@ public class EmployeeService {
 
     private Employee loadEmployee(Integer employeeId) {
         // External service that may or may not produce nulls!
-        final Employee loadedEmployee = employeeRepository.load(employeeId);
+        var loadedEmployee = employeeRepository.load(employeeId);
 
         // Ugly work-around for an external service returning nulls!
-        if (loadedEmployee == null) {
-            return new NullEmployee();
-        } else {
-            return loadedEmployee;
-        }
+        return Objects.requireNonNullElseGet(loadedEmployee, NullEmployee::new);
     }
 
     private void reportOnWagersOf(List<Employee> employees) {
-        for (Employee employee : employees) {
+        for (var employee : employees) {
             reportOnWagerOf(employee);
         }
     }
 
     private void reportOnWagerOf(Employee employee) {
         // No need to check for null Employee objects and can safely call methods on it.
-        final int employeeWager = employee.calculateWager();
-        final String employeeFirstName = employee.getFirstName();
-        final String employeeLastName = employee.getLastName();
+        var employeeWager = employee.calculateWager();
+        var employeeFirstName = employee.getFirstName();
+        var employeeLastName = employee.getLastName();
 
         // Call some external reporting service that generates a PDF document.
         employeeReporter.generatePDFReportFor(employeeFirstName, employeeLastName, employeeWager);

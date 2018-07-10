@@ -6,18 +6,18 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NullEmployeeTest {
+class NullEmployeeTest {
 
     @Test
-    public void shouldAlwaysReturnTrueOnIsNullable() {
-        final NullEmployee nullEmployee = new NullEmployee();
+    void shouldAlwaysReturnTrue_onIsNullable() {
+        var nullEmployee = new NullEmployee();
 
         assertThat(nullEmployee.isNull()).isTrue();
     }
 
     @Test
-    public void shouldReturnNonNullDefaults() {
-        final NullEmployee nullEmployee = new NullEmployee();
+    void shouldReturnNonNullDefaults_onBuildNullEmployee() {
+        var nullEmployee = new NullEmployee();
 
         assertThat(nullEmployee.getId()).isEqualTo(-1);
         assertThat(nullEmployee.getFirstName()).isEqualTo("Not available");

@@ -3,7 +3,7 @@ package be.jidoka.clean.code.exception.handling.domain;
 import java.time.LocalDate;
 
 // Not necessarily the best design to extend from a "real" employee,
-// Null Object can also be implemented with an Abstract base class or interface!
+// Null Object/Special case can also be implemented with an Abstract base class or interface!
 public class NullEmployee extends Employee {
 
     public NullEmployee() {

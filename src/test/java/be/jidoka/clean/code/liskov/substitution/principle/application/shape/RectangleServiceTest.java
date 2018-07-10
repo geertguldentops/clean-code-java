@@ -9,10 +9,10 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RectangleServiceTest {
+class RectangleServiceTest {
 
     @Test
-    public void shouldBeAbleToDoubleWidthOfAllRectangles() {
+    void shouldBeAbleToDoubleWidthOfAllRectangles() {
         final List<Rectangle> rectangles = ShapeFixture.generateRectangles();
 
         final List<Double> originalWidths = rectangles.stream()
@@ -40,7 +40,7 @@ public class RectangleServiceTest {
     }
 
     private void doubleWidthOf(Collection<Rectangle> rectangles) {
-        for (Rectangle rectangle : rectangles) {
+        for (var rectangle : rectangles) {
             rectangle.setWidth(rectangle.getWidth() * 2);
         }
     }
