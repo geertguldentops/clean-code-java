@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class RectangleServiceTest {
@@ -18,11 +18,11 @@ class RectangleServiceTest {
         final List<Double> originalWidths = rectangles.stream()
                 .mapToDouble(Rectangle::getWidth)
                 .boxed()
-                .collect(Collectors.toList());
+                .collect(toList());
         final List<Double> originalHeights = rectangles.stream()
                 .mapToDouble(Rectangle::getHeight)
                 .boxed()
-                .collect(Collectors.toList());
+                .collect(toList());
 
         // Assertions are not strictly necessary here but they make explicit what we expect to change after we call doubleWidthOf().
         for (int i = 0; i < rectangles.size(); i++) {
