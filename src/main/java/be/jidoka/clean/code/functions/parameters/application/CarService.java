@@ -14,13 +14,13 @@ public class CarService {
         var car = Car.CarBuilder.carBuilderWith()
                 .ownerName("Geert Guldentops")
                 .brand("BMW")
-                .make("116 D")
+                .make("316 D")
                 .color(Color.BLUE)
                 // Simply leave out any unused fields.
-//                .kilometersDriven(90_000)
+//                .kilometersDriven(42_000)
                 .build();
 
-        // Compare to: Car car = new Car("Geert Guldentops", "BMW", "116 D", Color.BLUE, 90_000);
+        // Compare to: Car car = new Car("Geert Guldentops", "BMW", "316 D", Color.BLUE, 42_000);
 
         return car;
     }

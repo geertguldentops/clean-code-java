@@ -10,14 +10,10 @@ public class Employee implements Nullable {
 
     private static final int BASE_SALARY = 1_000;
 
-    private Long id;
-
+    private final Long id;
     private final String firstName;
-
     private final String lastName;
-
     private final Function function;
-
     private final LocalDate hiringDate;
 
     public Employee(Long id, String firstName, String lastName, Function function, LocalDate hiringDate) {

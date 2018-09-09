@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.meaningful.names.encodings.avoid.domain;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Car {
 
@@ -8,15 +8,11 @@ public class Car {
     private static final int CONS_MAXIMUM_KILOMETERS_ALLOWED = 300_000;
 
     // Why encode that this fields are member variables? Our IDE colors them by default!
-    private String m_brand;
-
-    private String m_make;
-
-    private String m_ownerName;
-
-    private int m_kilometersDriven;
-
-    private Color m_color;
+    private final String m_brand;
+    private final String m_make;
+    private final String m_ownerName;
+    private final int m_kilometersDriven;
+    private final Color m_color;
 
     public Car(String m_brand, String m_make, String m_ownerName, int m_kilometersDriven, Color m_color) {
         this.m_brand = m_brand;

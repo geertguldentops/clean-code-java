@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class NullEmployee extends Employee {
 
     public NullEmployee() {
-        // Use reasonable defaults here --> reasonable depends on the domain!
+        // Use reasonable defaults here --> reasonable depends for the domain!
         super(-1L, "Not available", "Not available", Function.NO_FUNCTION, LocalDate.MAX);
     }
 

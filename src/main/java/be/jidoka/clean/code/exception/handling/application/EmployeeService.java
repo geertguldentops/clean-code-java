@@ -14,7 +14,8 @@ public class EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final EmployeeReporter employeeReporter;
 
-    public EmployeeService(EmployeeRepository employeeRepository, EmployeeReporter employeeReporter) {
+    public EmployeeService(EmployeeRepository employeeRepository,
+                           EmployeeReporter employeeReporter) {
         this.employeeRepository = employeeRepository;
         this.employeeReporter = employeeReporter;
     }

@@ -1,17 +1,13 @@
 package be.jidoka.clean.code.functions.parameters.domain;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Car {
 
     private String brand;
-
     private String make;
-
     private String ownerName;
-
     private int kilometersDriven;
-
     private Color color;
 
     // Avoid having 5 parameters in this constructor (+ maintenance when it becomes more or less!)
@@ -28,13 +24,9 @@ public class Car {
     public static class CarBuilder {
 
         private String brand;
-
         private String make;
-
         private String ownerName;
-
         private int kilometersDriven;
-
         private Color color;
 
         // Hide Builder constructor.
