@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock;
 
-public class DefAlarmClock implements AlarmClock {
+public class DeafAlarmClock implements AlarmClock {
 
     @Override
     public void showCurrentTime() {

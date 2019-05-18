@@ -2,7 +2,7 @@ package be.jidoka.clean.code.functions.parameters.application;
 
 import be.jidoka.clean.code.functions.parameters.domain.Car;
 
-import java.awt.*;
+import static java.awt.Color.BLUE;
 
 public class CarService {
 
@@ -15,8 +15,8 @@ public class CarService {
                 .ownerName("Geert Guldentops")
                 .brand("BMW")
                 .make("316 D")
-                .color(Color.BLUE)
-                // Simply leave out any unused fields.
+                .color(BLUE)
+                // Simply leave out any optional fields when necessary
 //                .kilometersDriven(42_000)
                 .build();
 

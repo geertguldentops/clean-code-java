@@ -3,14 +3,14 @@ package be.jidoka.clean.code.single.responsibility.principle.doinstead;
 public class Employee {
 
     private final EmployeePolicy employeePolicy;
-    private final EmployeeGateway employeeGateway;
+    private final EmployeeDatabaseGateway employeeDatabaseGateway;
     private final EmployeeReporter employeeReporter;
 
     public Employee(EmployeePolicy employeePolicy,
-                    EmployeeGateway employeeGateway,
+                    EmployeeDatabaseGateway employeeDatabaseGateway,
                     EmployeeReporter employeeReporter) {
         this.employeePolicy = employeePolicy;
-        this.employeeGateway = employeeGateway;
+        this.employeeDatabaseGateway = employeeDatabaseGateway;
         this.employeeReporter = employeeReporter;
     }
 
@@ -19,7 +19,7 @@ public class Employee {
     }
 
     public void save() {
-        employeeGateway.save();
+        employeeDatabaseGateway.save();
     }
 
     public String describeEmployee() {

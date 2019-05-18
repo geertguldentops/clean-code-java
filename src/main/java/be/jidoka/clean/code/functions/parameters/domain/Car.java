@@ -4,11 +4,11 @@ import java.awt.*;
 
 public class Car {
 
-    private String brand;
-    private String make;
-    private String ownerName;
-    private int kilometersDriven;
-    private Color color;
+    private final String brand;
+    private final String make;
+    private final String ownerName;
+    private final int kilometersDriven;
+    private final Color color;
 
     // Avoid having 5 parameters in this constructor (+ maintenance when it becomes more or less!)
     // Hide constructor, clients should use the CarBuilder!
