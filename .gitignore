@@ -14,3 +14,4 @@ target/
 **/overlays/
 *.epoch
 *.css
+cleanInstall.sh
