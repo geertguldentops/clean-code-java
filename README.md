@@ -2,9 +2,9 @@
 
 ## What is this repository for? ##
 
-Java code samples that explain some of the principles from the book [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) written by Robert C. Martin.
+Java code samples that explain principles from the book [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) written by Robert C. Martin.
 
-It is written in pure Java 12, using only 3 external Java libraries for testing: JUnit, Mockito and AssertJ.
+It is written in Java 14, using only 3 external Java libraries for testing: JUnit, Mockito and AssertJ.
 
 ## How do I get set up? ##
 
