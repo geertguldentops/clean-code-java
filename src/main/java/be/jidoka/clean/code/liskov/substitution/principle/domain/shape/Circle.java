@@ -17,7 +17,7 @@ public class Circle implements Shape {
     }
 
     @Override
-    public double calculateCircumference() {
+    public double calculatePerimeter() {
         return 2 * r * Math.PI;
     }
 

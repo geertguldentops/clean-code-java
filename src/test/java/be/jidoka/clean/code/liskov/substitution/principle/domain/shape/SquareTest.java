@@ -11,14 +11,14 @@ class SquareTest {
     void shouldReturn4TimesSideOnCalculateCircumference() {
         var square = new Square(3.6);
 
-        assertThat(square.calculateCircumference()).isEqualTo(14.4, offset(0.1));
+        assertThat(square.calculatePerimeter()).isEqualTo(14.4, offset(0.1));
     }
 
     @Test
     void shouldReturnSideSquaredOnCalculateArea() {
         var square = new Square(4);
 
-        assertThat(square.calculateCircumference()).isEqualTo(16, offset(0.1));
+        assertThat(square.calculatePerimeter()).isEqualTo(16, offset(0.1));
     }
 
 }

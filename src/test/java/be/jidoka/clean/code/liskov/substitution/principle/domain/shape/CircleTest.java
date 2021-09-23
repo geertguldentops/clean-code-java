@@ -11,7 +11,7 @@ class CircleTest {
     void shouldReturnTwoTimesRadiusTimesPi_onCalculateCircumference() {
         var circle = new Circle(3.2);
 
-        assertThat(circle.calculateCircumference()).isEqualTo(20.11, offset(0.01));
+        assertThat(circle.calculatePerimeter()).isEqualTo(20.11, offset(0.01));
     }
 
     @Test

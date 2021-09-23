@@ -11,7 +11,7 @@ class RectangleTest {
     void shouldReturnTwoTimesWidthPlusTwoTimesHeight_onCalculateCircumference() {
         var rectangle = new Rectangle(7.8, 4.3);
 
-        assertThat(rectangle.calculateCircumference()).isEqualTo(24.2, offset(0.1));
+        assertThat(rectangle.calculatePerimeter()).isEqualTo(24.2, offset(0.1));
     }
 
     @Test
