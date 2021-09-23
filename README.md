@@ -8,7 +8,4 @@ It is written in Java, using only 3 external Java libraries for testing: JUnit, 
 
 ## How do I get set up? ##
 
-Maven (3) is used to compile the code and run the tests: 
-
-* You can run maven manually using `mvn clean install` from the command line.
-* Run the project's only pom.xml file using your favourite IDE! (IntelliJ IDEA, Eclipse, Netbeans, etc.)
+Maven (3) is used to compile the code and run the tests
