@@ -1,4 +1,4 @@
-package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock;
+package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock.avoid;
 
 public class DigitalAlarmClock implements AlarmClock {
 

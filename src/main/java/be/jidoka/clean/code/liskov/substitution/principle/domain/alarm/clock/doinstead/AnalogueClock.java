@@ -1,6 +1,6 @@
-package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock;
+package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock.doinstead;
 
-public class AnalogueClock implements AlarmClock {
+public class AnalogueClock implements Clock, Alarm {
 
     @Override
     public void showCurrentTime() {
@@ -8,7 +8,7 @@ public class AnalogueClock implements AlarmClock {
     }
 
     @Override
-    public void ringBell() {
+    public void wakeUp() {
         // Ring an annoying analogue bell.
     }
 
