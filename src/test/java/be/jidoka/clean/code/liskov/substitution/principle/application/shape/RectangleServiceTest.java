@@ -4,25 +4,23 @@ import be.jidoka.clean.code.liskov.substitution.principle.domain.shape.Rectangle
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
-import java.util.List;
 
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class RectangleServiceTest {
 
     @Test
     void shouldBeAbleToDoubleWidthOfAllRectangles() {
-        final List<Rectangle> rectangles = ShapeFixture.generateRectangles();
+        var rectangles = ShapeFixture.generateRectangles();
 
-        final List<Double> originalWidths = rectangles.stream()
+        var originalWidths = rectangles.stream()
                 .mapToDouble(Rectangle::getWidth)
                 .boxed()
-                .collect(toList());
-        final List<Double> originalHeights = rectangles.stream()
+                .toList();
+        var originalHeights = rectangles.stream()
                 .mapToDouble(Rectangle::getHeight)
                 .boxed()
-                .collect(toList());
+                .toList();
 
         // Assertions are not strictly necessary here but they make explicit what we expect to change after we call doubleWidthOf().
         for (int i = 0; i < rectangles.size(); i++) {
