@@ -1,6 +1,6 @@
 package be.jidoka.clean.code.liskov.substitution.principle.domain.shape;
 
-import org.junit.jupiter.api.Disabled;
+import be.jidoka.clean.code.liskov.substitution.principle.application.shape.ShapeTestFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,18 +8,16 @@ import static org.assertj.core.data.Offset.offset;
 
 class LiskovTest {
 
-    @Disabled
     @Test
-    void squareBreaksLiskovsSubstitutionPrinciple() {
-        Rectangle rectangle = new Square(12.5);
+    void resizeRectangle() {
+        var rectangles = ShapeTestFactory.generateRectangles();
 
-        assertThat(rectangle.getHeight()).isEqualTo(12.5, offset(0.1));
-        assertThat(rectangle.getWidth()).isEqualTo(12.5, offset(0.1));
+        for (var rectangle : rectangles) {
+            rectangle.setWidth(5.0);
+            rectangle.setHeight(4.0);
 
-        rectangle.setWidth(6);
-
-        assertThat(rectangle.getHeight()).isEqualTo(12.5, offset(0.1));
-        assertThat(rectangle.getWidth()).isEqualTo(6.0, offset(0.1));
+            assertThat(rectangle.calculateArea()).isEqualTo(20.00, offset(0.1));
+        }
     }
 
 }

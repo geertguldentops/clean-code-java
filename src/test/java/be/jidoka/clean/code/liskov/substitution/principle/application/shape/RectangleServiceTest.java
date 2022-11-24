@@ -11,7 +11,7 @@ class RectangleServiceTest {
 
     @Test
     void shouldBeAbleToDoubleWidthOfAllRectangles() {
-        var rectangles = ShapeFixture.generateRectangles();
+        var rectangles = ShapeTestFactory.generateRectangles();
 
         var originalWidths = rectangles.stream()
                 .mapToDouble(Rectangle::getWidth)
