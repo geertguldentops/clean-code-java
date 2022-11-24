@@ -2,6 +2,6 @@ package be.jidoka.clean.code.liskov.substitution.principle.domain.alarm.clock.do
 
 public interface Alarm {
 
-	void wakeUp();
+    void wakeUp();
 
 }

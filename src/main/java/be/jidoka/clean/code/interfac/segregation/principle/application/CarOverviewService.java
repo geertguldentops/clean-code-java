@@ -16,7 +16,7 @@ public class CarOverviewService {
     public Set<Car> showCars(String name) {
         // Doesn't compile! There is no save method on the carQueryRepository!
         // This is good since now we can't accidentally save a car while we are querying it.
-        
+
         // carQueryRepository.save(car);
 
         return carQueryRepository.findAllBy(name);
