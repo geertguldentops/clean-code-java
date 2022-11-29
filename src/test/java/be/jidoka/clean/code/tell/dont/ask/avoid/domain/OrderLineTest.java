@@ -12,7 +12,7 @@ class OrderLineTest {
     void shouldReturnPriceMultipliedByAmount_onCalculateSubtotal_withValidOrderLine() {
         var orderLine = new OrderLine("Clean code distilled", BigDecimal.TEN, 5);
 
-        assertThat(orderLine.calculateSubtotal()).isEqualTo("50");
+        assertThat(orderLine.calculateSubtotal()).isEqualByComparingTo("50");
     }
 
 }

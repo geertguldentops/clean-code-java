@@ -26,7 +26,7 @@ class FinaliseOrderServiceTest {
         order.addLine(new OrderLine("Clean code", new BigDecimal("50.00"), 1));
         order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("99.99"), 2));
 
-        assertThat(order.calculateTotal()).isEqualTo("249.98");
+        assertThat(order.calculateTotal()).isEqualByComparingTo("249.98");
 
         var discount = new BigDecimal("0.1");
         finaliseOrderService.finalise(order, discount);

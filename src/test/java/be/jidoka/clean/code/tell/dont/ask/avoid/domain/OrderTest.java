@@ -14,7 +14,7 @@ class OrderTest {
         order.addLine(new OrderLine("Clean code", new BigDecimal("44.99"), 1));
         order.addLine(new OrderLine("Java Concurrency in practice", new BigDecimal("49.99"), 2));
 
-        assertThat(order.calculateTotal()).isEqualTo("144.97");
+        assertThat(order.calculateTotal()).isEqualByComparingTo("144.97");
     }
 
 }
