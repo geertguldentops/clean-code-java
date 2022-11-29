@@ -3,11 +3,11 @@ package be.jidoka.clean.code.interfac.segregation.principle.application;
 import be.jidoka.clean.code.interfac.segregation.principle.domain.Car;
 import be.jidoka.clean.code.interfac.segregation.principle.domain.CarRepository;
 
-public class SaveCarService {
+public class CarLeaseService {
 
     private final CarRepository carRepository;
 
-    public SaveCarService(CarRepository carRepository) {
+    public CarLeaseService(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
 
@@ -15,6 +15,7 @@ public class SaveCarService {
     // @Transactional
     public void save(Car car) {
         // Very easy to use interface, only 1 method!
+        // Business logic related to leasing car
         carRepository.save(car);
     }
 

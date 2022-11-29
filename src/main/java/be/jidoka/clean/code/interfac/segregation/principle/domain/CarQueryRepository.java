@@ -4,7 +4,7 @@ import java.util.Set;
 
 public interface CarQueryRepository {
 
-    Car findBy(Long Id);
+    Car getBy(Long id);
 
     Set<Car> findAllBy(String owner);
 
