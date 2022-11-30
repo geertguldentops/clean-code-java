@@ -2,9 +2,9 @@ package be.jidoka.clean.code.tell.dont.ask.doinstead.application;
 
 import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.Order;
 import be.jidoka.clean.code.tell.dont.ask.doinstead.domain.OrderRepository;
-import be.jidoka.clean.code.test.extension.MockitoExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 
