@@ -7,7 +7,7 @@ public class Car {
     // The key word final already tells you this is a constant!
     private static final int CONS_MAXIMUM_KILOMETERS_ALLOWED = 300_000;
 
-    // Why encode that this fields are member variables? Our IDE colors them by default!
+    // Why encode that these fields are member variables? Our IDE colors them by default!
     private final String m_brand;
     private final String m_make;
     private final String m_ownerName;
