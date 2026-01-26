@@ -18,7 +18,7 @@
 
         <junit.version>5.9.1</junit.version>
         <mockito.version>4.9.0</mockito.version>
-        <assertj-core.version>3.23.1</assertj-core.version>
+        <assertj-core.version>3.27.7</assertj-core.version>
     </properties>
 
     <dependencyManagement>
